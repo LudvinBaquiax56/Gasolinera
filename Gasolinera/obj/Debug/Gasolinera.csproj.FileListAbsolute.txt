@@ -61,3 +61,34 @@ C:\Users\HP\Source\Repos\Gasolinera\Gasolinera\obj\Debug\Gasolinera.csproj.CoreC
 C:\Users\HP\Source\Repos\Gasolinera\Gasolinera\obj\Debug\Gasolinera.csproj.CopyComplete
 C:\Users\HP\Source\Repos\Gasolinera\Gasolinera\obj\Debug\Gasolinera.exe
 C:\Users\HP\Source\Repos\Gasolinera\Gasolinera\obj\Debug\Gasolinera.pdb
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\Gasolinera.exe.config
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\Gasolinera.exe
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\Gasolinera.pdb
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\Newtonsoft.Json.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Buffers.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Memory.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Text.Json.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.ValueTuple.dll
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\Newtonsoft.Json.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Buffers.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Memory.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Text.Json.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\bin\Debug\System.ValueTuple.xml
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\obj\Debug\Gasolinera.csproj.AssemblyReference.cache
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\obj\Debug\Gasolinera.Form1.resources
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\obj\Debug\Gasolinera.Properties.Resources.resources
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\obj\Debug\Gasolinera.csproj.GenerateResource.cache
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\obj\Debug\Gasolinera.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\obj\Debug\Gasolinera.csproj.CopyComplete
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\obj\Debug\Gasolinera.exe
+C:\Users\HP\Documents\U meso\Progra III\Nueva carpeta\Gasolinera\Gasolinera\obj\Debug\Gasolinera.pdb
