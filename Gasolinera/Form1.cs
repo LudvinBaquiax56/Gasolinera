@@ -18,10 +18,15 @@ namespace Gasolinera
         SerialPort puerto;
         string COM = "COM6";
         Bomba bomba1;
+        Bomba bomba2;
+        
+        
         public Form1()
         {
             InitializeComponent();
             bomba1 = new Bomba("1", 30);
+            bomba2= new Bomba("2", 30);
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,14 +61,14 @@ namespace Gasolinera
             //}
         }
 
-        private void Despachar(object sender, EventArgs e)
+        
+
+        private void ff(Bomba bomba)
         {
-            
-            string json = JsonSerializer.Serialize(bomba1);
+            int litrosAdespchar= Convert.ToInt32(textBoxLitros.Text);
+            string json = JsonSerializer.Serialize(bomba);
             Console.WriteLine(json);
             puerto.WriteLine(json);
-            //string textoRecibido = puerto.ReadLine();
-            //Console.WriteLine(textoRecibido + "Recibido 1");
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -73,5 +78,22 @@ namespace Gasolinera
                 puerto.Close();
             }
         }
+
+        private void buttonBomba1_Click(object sender, EventArgs e)
+        {
+            DespacharBomba(bomba1);
+        }
+
+        private void buttonBomba2_Click(object sender, EventArgs e)
+        {
+            DespacharBomba(bomba2);
+        }
+
+        private void textBoxLitros_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
