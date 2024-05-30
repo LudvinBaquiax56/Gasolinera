@@ -19,8 +19,14 @@ namespace Gasolinera
         string COM = "COM6";
         Bomba bomba1;
         Bomba bomba2;
-        
-        
+        List<Abastecimientos> abastecimientos = new List<Abastecimientos>();
+
+        public void MostrarReporte()
+        {
+            dataGridViewReporte.DataSource = null;
+            dataGridViewReporte.DataSource = abastecimientos;
+            dataGridViewReporte.Refresh();
+        }
         public Form1()
         {
             InitializeComponent();
@@ -28,6 +34,7 @@ namespace Gasolinera
             bomba2= new Bomba("2", 30);
             
         }
+        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -61,15 +68,76 @@ namespace Gasolinera
             //}
         }
 
-        
+        private void llenarTanque(Bomba bomba)
+        {
+            bomba.LLenarTanque = true;
+            string jsonString = JsonSerializer.Serialize(bomba);
 
-        private void ff(Bomba bomba)
+            // Enviar el JSON a Arduino
+            puerto.WriteLine(jsonString);
+
+            // Esperar y leer la respuesta de Arduino
+            string response = puerto.ReadLine();
+
+            if (!string.IsNullOrEmpty(response))
+            {
+                var jsonData2 = JsonSerializer.Deserialize<JsonDocument>(response);
+                //bool ledState = jsonData2.RootElement.GetProperty("Codigo").GetBoolean();
+                int buttonState = jsonData2.RootElement.GetProperty("Tiempo").GetInt32();
+                int litrosAdespchar = Convert.ToInt32((buttonState - 2000)/1000);
+                    //Convert.ToInt32(textBoxLitros.Text);
+
+
+                UpdateUI(litrosAdespchar);
+                int tiempo= Convert.ToInt32(textBoxLitrosDespachados.Text);
+                int precio = Convert.ToInt32(textBoxPrecio.Text);
+                string nombre = textBoxNombreCliente.Text;
+                string tipoCombustible = comboBoxTipoGasolina.SelectedItem.ToString();
+
+
+
+                Abastecimientos abastecimiento = new Abastecimientos();
+                abastecimiento.Nombre = nombre;
+                abastecimiento.LitrosVendidos = litrosAdespchar;
+                abastecimiento.Precio = precio;
+                abastecimiento.Tipo = tipoCombustible;
+                abastecimiento.CalcularTotal();
+                abastecimientos.Add(abastecimiento);
+
+            }
+        }
+        private void UpdateUI(int litros)
+        {
+            textBoxLitrosDespachados.Text = litros.ToString();
+            //buttonStatusLabel.Text = buttonState == 1 ? "Presionado" : "No presionado";
+        }
+
+
+        private void DespacharBomba(Bomba bomba)
         {
             int litrosAdespchar= Convert.ToInt32(textBoxLitros.Text);
+            bomba.LLenarTanque = false;
             string json = JsonSerializer.Serialize(bomba);
             Console.WriteLine(json);
             puerto.WriteLine(json);
+
+            int precio = Convert.ToInt32(textBoxPrecio.Text);
+            string nombre= textBoxNombreCliente.Text;
+            string tipoCombustible = comboBoxTipoGasolina.SelectedItem.ToString();
+
+            
+
+            Abastecimientos abastecimiento = new Abastecimientos();
+            abastecimiento.Nombre = nombre;
+            abastecimiento.LitrosVendidos = litrosAdespchar; 
+            abastecimiento.Precio = precio;
+            abastecimiento.Tipo=tipoCombustible;
+            abastecimiento.CalcularTotal();
+            abastecimientos.Add(abastecimiento);
+
         }
+
+            
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -89,11 +157,20 @@ namespace Gasolinera
             DespacharBomba(bomba2);
         }
 
-        private void textBoxLitros_TextChanged(object sender, EventArgs e)
+        
+        private void buttonVerReporte_Click(object sender, EventArgs e)
         {
-
+            MostrarReporte();
         }
 
-        
+        private void buttonLlenarTanque1_Click(object sender, EventArgs e)
+        {
+            llenarTanque(bomba1);
+        }
+
+        private void buttonLlenarTanque2_Click(object sender, EventArgs e)
+        {
+            llenarTanque(bomba1);
+        }
     }
 }
